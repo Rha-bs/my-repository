@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guy with the Frags</title>
+  <style>
+    *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  
+}
+body{
+  color: #fff;
+  background-image: linear-gradient(grey, black);
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  padding-top: 35px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+nav{
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a{
+  font-size: 40px;
+  text-decoration: none;
+}
+span{
+  color: red;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 15px;
+}
+nav ul li a{
+  text-decoration: none;
+  transition: 0.5s;
+}
+nav ul li a:hover{
+  color: #f9004d;
+}
+
+.btn{
+  background: #000;
+  border-radius: 6px;
+  padding: 9px 25px;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 18px;
+}
+.content{
+  margin-top: 10%;
+  max-width: 2000px;
+}
+.content h2{
+  font-size: 60px
+}
+.content p{
+  margin-top: 10px;
+  line-height: 25px;
+}
+a{
+  color: #fff;
+}
+
+.read{
+  color: #000;
+  text-decoration: none;
+  background: #fff;
+  padding: 9px 25px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.link .read:hover{
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.cdn-txt {
+  position: absolute;
+  right: 500px; 
+  top: 550px;
+  text-justify: auto;
+  margin: 10px;
+  margin-left: 600px;
+  margin-right: 300px;
+}
+.symmlabs-txt {
+  position: absolute;
+  right: 50px; 
+  top: 1000px;
+  text-justify: auto;
+  margin: 10px;
+  margin-left: 600px;
+  margin-right: 300px;
+}
+.sauvage-elixir-txt {
+  position: absolute;
+  right: 50px; 
+  top: 1550px;
+  text-justify: auto;
+  margin: 10px;
+  margin-left: 600px;
+  margin-right: 300px;
+}
+.man-in-black-txt {
+  position: absolute;
+  right: 50px; 
+  top: 2025px;
+  text-justify: auto;
+  margin: 10px;
+  margin-left: 600px;
+  margin-right: 300px;
+}
+.terrae-essence-txt {
+  position: absolute;
+  right: 50px; 
+  top: 2550px;
+  text-justify: auto;
+  margin: 10px;
+  margin-left: 600px;
+  margin-right: 300px;
+}
+.hugo-boss-txt {
+  position: absolute;
+  right: 50px; 
+  top: 3100px;
+  text-justify: auto;
+  margin: 10px;
+  margin-left: 600px;
+  margin-right: 300px;
+}
+.arabians-tonka-txt {
+  position: absolute;
+  right: 50px; 
+  top: 3600px;
+  text-justify: auto;
+  margin: 10px;
+  margin-left: 600px;
+  margin-right: 300px;
+}
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.popup img {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#openBtn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#openBtn2 {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#openBtn3 {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#openBtn4 {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#openBtn5 {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#openBtn6 {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#openBtn7 {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#openBtn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#openBtn2:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#openBtn3:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#openBtn4:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#openBtn5:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#openBtn6:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#openBtn7:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#contactBtn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#contactBtn:hover {
+  background-color: #333;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 3px 0; 
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <a href="#">Guy with the <span>Frags.</span></a>
+      </div>
+
+      <ul>
+        <li><a href="file:///D:/Humcom%20project/Home.html">Home</a></li>
+        <li><a href="file:///D:/Humcom%20project/About.html">About</a></li>
+        <li><a href="file:///D:/Humcom%20project/Contact.html">Contact</a></li>
+      </ul>
+      
+    </nav>
+
+    <div class="content">
+      <h2>Since the Philippines only has 2 weathers, which is hot and cold/cool, I have some <br>Recommendations!</h2> <br>
+    </div>
+    <hr>
+
+    <strong><h2> 1. Club de nuit (EDT, EDP, PARFUM)</strong> <br> </h2>
+    <a href="https://shopee.ph/CDNIM-LE-105ml-bottle-by-Armaf-NEW-Limited-Edition-i.240638986.12639696839?sp_atk=7cc3f82e-3616-4291-9375-15c26a3a8351&xptdk=7cc3f82e-3616-4291-9375-15c26a3a8351"> 
+      <img src="cdn.jpg" height="400" width="400"> </a>
+
+    <h1> <p class="cdn-txt">Club de nuit is a dupe/clone of Creed Aventus that costs around (P15k - P20k). For a clone it smells amazing and smells extremely close to the original
+      . It lasts longer and projects farther than Aventus which is a huge selling point for others. 
+    </p> </h1>
+    <br>
+    <br>
+
+    <button id="openBtn">Check it's scent profile. </button>
+
+<div class="popup" id="popup">
+  <span class="close" id="closeBtn">&times;</span>
+  <img src="cdn-parfum-scent-profile.jpg" alt="Popup Image">
+</div>
+
+
+<script src="script.js"></script>
+  <div id="symmlabs"> <strong><h2> 2. Symmetry Labs Marksman (EDP)</strong> <br> </h2>
+  <a href="https://shopee.ph/Marksman-by-Symmetry-Lab(inspired-by-PDM-Herod)-i.272820668.21489911625?sp_atk=94518617-7092-4ba3-8f21-f54693b8c7cb&xptdk=94518617-7092-4ba3-8f21-f54693b8c7cb"> 
+    <img src="Symm Labs.jpg" width="400" height="400"> </a>
+
+  <h1> <p class="symmlabs-txt"> Here we have an inspired frag made here in the Philippines. It's inspired from another niche fragrance namely Parfums De Marly herod.
+    It has a clean tobacco and vanilla scent blended together evening out the tobacco scent. It smells really close to PDM's Herod, so if you're looking for a cheaper
+    alternative and still get the same scent profile, go with this one. </h1>
+  </p> </h1>
+  
+    <button id="openBtn2">Check it's scent profile. </button>
+    <div class="popup" id="popup2">
+      <span class="close" id="closeBtn2">&times;</span>
+      <img src="herod-scent-profile.jpg" alt="Popup Image">
+    </div>
+  </div>
+ 
+    
+    <script src="script.js"></script> 
+<br>
+<br>
+<div id="sauvage-elixir"> <strong><h2> 3. Sauvage Elixir </strong>  </h2> <br>
+      <a href="https://ph.shp.ee/FywMDVQ"> <img src="elixir.jpg" height="400" width="400"> </a>
+        
+
+      <h1> <p class = "sauvage-elixir-txt"> Sauvage Elixir is a beast mode fragrance that has strong sillage and projection. If you want to be noticed and make your existence
+        known, this frag makes it so. You can wear it during cold weathers as it's smell goes well under cold weater. 2 sprays MAX... Seriously..
+      </p></h1>
+  
+      <button id="openBtn3">Check it's scent profile. </button>
+
+      <div class="popup" id="popup3">
+        <span class="close" id="closeBtn3">&times;</span>
+        <img src="sauvage-elixir-scent-profile.jpg" alt="Popup Image">
+      </div>
+
+      
+      <script src="script.js"></script>
+</div>
+      <br>
+      <br>
+
+      <div id="man-in-blackers"><strong><h2> 4. Man in Black </strong>  </h2>
+      <a href="https://ph.shp.ee/Mzy1Htb"> 
+      <img class="man-in-black-pic" src="man-in-black.jpg" height="400" width="400"> </a>
+      <h1> <p class = "man-in-black-txt"> Man in Black by Bvlgari as stated by the name, is best worn going out in black tie events, and cold weather. It has the same scent profile
+        as Spicebomb and as it dries down it transitions to the scent of Spicebomb Extreme. The spices, the vanilla and rum compliments each other and has a great dry down, you should
+        spray this one on your skin than clothes to really flush the scents out.
+      </p></h1>
+  
+      <button id="openBtn4">Check it's scent profile. </button>
+
+      <div class="popup" id="popup4">
+        <span class="close" id="closeBtn4">&times;</span>
+        <img src="man-in-black-scent-profile.jpg" alt="Popup Image">
+      </div>
+   
+      
+      <script src="script.js"></script>
+    </div>
+      <br>
+      <br>
+      
+      <div id="terrae-essencers"><strong><h2> 5. Terrae Essence </strong>  </h2>
+      <a href="https://ph.shp.ee/NoWEBiF"> 
+      <img class="terrae-essence-pic" src="terrae-essence.jpg" height="400" width="400"> </a>
+      <h1> <p class = "terrae-essence-txt"> Terrae Essence is another perfume by Bvlgari, if you want to smell like the earth with a more citrusy touch, defintely get this.Do note It is not
+        blind buy worthy as the smell may be too strong for you as this perfume is not for everyone. It has strong projection and sillage i recommend 2-3 sprays, definitely in the cold weather.
+      </p></h1>
+  
+      <button id="openBtn5">Check it's scent profile. </button>
+      </div>
+      <br>
+
+      <div class="popup" id="popup5">
+        <span class="close" id="closeBtn5">&times;</span>
+        <img src="bvlgari-terrae-essence-scent-profile.jpg" alt="Popup Image">
+      </div>
+ 
+      <script src="script.js"></script>
+
+      <br>
+      <br>
+      <div id="bottled-nighters"> <strong><h2> 6. Hugo Boss Bottled Night</strong>  </h2>
+      <a href="https://ph.shp.ee/TTX847X"> 
+      <img class="hugo-boss-pic" src="hugo-boss.jpg" height="400" width="400"> </a>
+      <h1> <p class = "hugo-boss-txt"> Bottled night is a great night time fragrance, it has a dark, woody notes making it ideal for date nights, going out at night. This is due to it not 
+        trying too hard to get attention, but it gets the job done.
+      </p></h1>
+
+      <br>
+
+      <button id="openBtn6">Check it's scent profile. </button>
+
+      <div class="popup" id="popup6">
+        <span class="close" id="closeBtn6">&times;</span>
+        <img src="bottled-night-scent-profile.jpg" alt="Popup Image">
+      </div>
+ 
+      </div>
+
+      <br>
+      <br>
+
+      <div id="arabians-tonkers"><strong><h2> 7. Montale Arabians Tonka </strong>  </h2>
+      <a href="https://ph.shp.ee/HiBYn9D"> 
+      <img class="hugo-boss-pic" src="Arabians Tonka.jpg" height="400" width="400"> </a>
+      <h1> <p class = "arabians-tonka-txt"> Arabians Tonka by Montale doesn't beat around the bush just like sauvage elixir, it's really really strong, really sweet, and lasts really long. We're
+        talking about 8+ hrs here. Tested it with only 1 spray as per the initial reviews I have seen, with just 1 spray everyone around the house can smell me even when I'm downstairs.
+        2 sprays MAX, perfect for cold weathers.
+      </p></h1>
+
+      <button id="openBtn7">Check it's scent profile. </button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<center> <p><h1>  It's important to consider the event, and environment you go and choose the appropriate perfume, unless you're one of the people that has their own rules
+  but hey more power to you my friend. Stay fresh! </p> </center></h1> 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+<div class="popup" id="popup7">
+  <span class="close" id="closeBtn7">&times;</span>
+  <img src="arabians-tonka-scent-profile.jpg" alt="Popup Image">
+</div>
+
+      </div>
+        </div>
+        </div>
+  </div>
+</div>
+  </div>
+  <footer>
+    <button id="contactBtn"> Contact Me</button>
+  </footer>
+
+  <div class="popup" id="popup">
+    <span class="close" id="closeBtn">&times;</span>
+    <img src="arabians-tonka-scent-profile.jpg" alt="Popup Image">
+  </div>
+
+  
+  <script>
+    document.getElementById("openBtn").addEventListener("click", function() {
+      document.getElementById("popup").style.display = "block";
+    });
+
+    document.getElementById("closeBtn").addEventListener("click", function() {
+      document.getElementById("popup").style.display = "none";
+    });
+
+    document.getElementById("openBtn2").addEventListener("click", function() {
+      document.getElementById("popup2").style.display = "block";
+    });
+
+    document.getElementById("closeBtn2").addEventListener("click", function() {
+      document.getElementById("popup2").style.display = "none";
+    });
+
+    document.getElementById("openBtn3").addEventListener("click", function() {
+      document.getElementById("popup3").style.display = "block";
+    });
+
+    document.getElementById("closeBtn3").addEventListener("click", function() {
+      document.getElementById("popup3").style.display = "none";
+    });
+
+    document.getElementById("openBtn4").addEventListener("click", function() {
+      document.getElementById("popup4").style.display = "block";
+    });
+
+    document.getElementById("closeBtn4").addEventListener("click", function() {
+      document.getElementById("popup4").style.display = "none";
+    });
+
+    document.getElementById("openBtn5").addEventListener("click", function() {
+      document.getElementById("popup5").style.display = "block";
+    });
+
+    document.getElementById("closeBtn5").addEventListener("click", function() {
+      document.getElementById("popup5").style.display = "none";
+    });
+
+    document.getElementById("openBtn6").addEventListener("click", function() {
+      document.getElementById("popup6").style.display = "block";
+    });
+
+    document.getElementById("closeBtn6").addEventListener("click", function() {
+      document.getElementById("popup6").style.display = "none";
+    });
+
+    document.getElementById("openBtn7").addEventListener("click", function() {
+      document.getElementById("popup7").style.display = "block";
+    });
+
+    document.getElementById("closeBtn7").addEventListener("click", function() {
+      document.getElementById("popup7").style.display = "none";
+    });
+
+    document.getElementById("contactBtn").addEventListener("click", function() {
+      
+      alert("Maam I tried! Hanggang d2 lng akow");
+    });
+  </script>
+</body>
+</html>
+
+
